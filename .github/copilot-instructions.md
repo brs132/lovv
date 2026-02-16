@@ -63,12 +63,19 @@ This repository (lovv) contains the "Leigos Academy" Chrome extension (Manifest 
 
 ## Key Security Considerations
 
-1. **Token Management**: Authentication tokens are stored in chrome.storage.local
+1. **Token Management**: 
+   - Authentication tokens are stored in chrome.storage.local
+   - Token storage is scoped to the extension and not accessible to web pages
+   - Tokens should be treated as sensitive data - avoid logging full token values
+   - Clear tokens when no longer needed or on logout
+   - Token lifecycle: capture → store → use → clear on session end
 2. **CORS Handling**: Be mindful of content security policy with Lovable.dev
 3. **Extension Context**: Always verify extension context is alive before API calls
 4. **No Secrets in Code**: Configuration should reference environment/storage, not hardcode
 5. **Input Sanitization**: Validate user inputs before processing
 6. **Permissions**: Request only necessary permissions in manifest.json
+7. **Secure Communication**: Use HTTPS for all external API calls
+8. **Content Script Isolation**: Content scripts run in isolated world - use message passing for sensitive operations
 
 ## Development Workflow
 
