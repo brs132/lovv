@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Leigos Academy",
+  "version": "9.2.0",
+  "description": "Prompts Ilimitados\nna Lovable — Sem Consumir Créditos",
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting",
+    "webRequest",
+    "sidePanel"
+  ],
+  "host_permissions": [
+    "https://*.lovable.dev/*",
+    "https://*.supabase.co/*",
+    "https://storage.googleapis.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.lovable.dev/*"],
+      "js": ["security.js", "content.js"],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "side_panel": {
+    "default_path": "popup.html"
+  },
+  "action": {
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "128": "icon.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["shield-inject.js", "widget.html"],
+      "matches": ["https://*.lovable.dev/*"]
+    }
+  ]
+}
