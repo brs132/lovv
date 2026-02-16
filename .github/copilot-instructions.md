@@ -99,7 +99,7 @@ This repository (lovv) contains the "Leigos Academy" Chrome extension (Manifest 
 # Reload extension after changes via chrome://extensions/
 
 # Check for basic syntax errors
-node -c <filename.js>
+node --check <filename.js>
 
 # View extension logs
 # Open Chrome DevTools for popup, content script, and background service worker
