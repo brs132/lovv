@@ -1,8 +1,10 @@
-# GitHub Copilot Instructions for Lovv
+# GitHub Copilot Instructions for Leigos Academy Extension
 
 ## Project Overview
 
-This is a Chrome extension (Manifest V3) called "Leigos Academy" that provides unlimited prompts for Lovable.dev without consuming credits. The extension interacts with the Lovable platform by capturing authentication tokens and project IDs, then managing chat interactions.
+This repository (lovv) contains the "Leigos Academy" Chrome extension (Manifest V3) that provides unlimited prompts for Lovable.dev without consuming credits. The extension interacts with the Lovable platform by capturing authentication tokens and project IDs, then managing chat interactions.
+
+**Note**: The repository name is "lovv" but the extension's display name is "Leigos Academy".
 
 ## Tech Stack
 
